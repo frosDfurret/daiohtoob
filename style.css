@@ -157,3 +157,10 @@ a:hover {
 	padding: 1px;
 	border: solid #999 1px;
 }
+
+/* Watch Page */
+
+#watch {
+	display: flex;
+	flex-direction: row;
+}
