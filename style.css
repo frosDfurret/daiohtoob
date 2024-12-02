@@ -1,0 +1,159 @@
+body {
+	background-color: #FCB1A6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0px;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #03c;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+#content {
+	background-color: #FFDCCC;
+	width: 970px;
+	margin: 0;
+	padding: 0px;
+	-webkit-box-shadow: 0px 0px 100px 150px rgba(255,220,204,1);
+	-moz-box-shadow: 0px 0px 100px 150px rgba(255,220,204,1);
+	box-shadow: 0px 0px 100px 150px rgba(255,220,204,1);
+}
+
+#topbar {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: 12px;	
+}
+
+#navbar {
+	height: 37px;
+	outline: solid #999 1px;
+	outline-offset: -1px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px;
+}
+
+#nb-links {
+	display: flex;
+	
+}
+
+.nb-button {
+	font-size: 14px;
+	color: #03c;
+	padding: 10px 10px 10px 10px;
+	margin: 0;
+	font-weight: bold;
+	border-right: solid #999 1px;
+	margin: 0;
+}
+
+#searchbar {
+	width: 295px;
+	padding: 4px 5px 5px 1px;
+	font-size: 13px;
+	vertical-align: middle;
+	border: 1px solid #999;
+}
+
+#searchbutton {
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+	color: #5D2A42;
+	font-size: 13px;
+	height: 28px;
+	background: rgb(252,177,166);
+	background: linear-gradient(180deg, rgba(252,177,166,1) 0%, rgba(252,165,159,1) 42%, rgba(251,99,118,1) 100%);
+	border: solid 1px #FB6376;
+	border-radius: 5px;
+	font-family: Arial, sans-serif;
+}
+
+#searchbutton:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.video {
+	width: 600px;
+	height: 72px;
+	padding: 10px 0px;
+	margin-top: 12px;
+	display: flex;
+}
+
+.thumbdiv {
+	display: flex;
+	position: relative;
+}
+
+.vidinfo {
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+	width: 100%;
+}
+
+.vidtitle {
+	font-size: 14px;
+	padding-bottom: 1px;
+}
+
+.viddesc {
+	font-size: 12px;
+	color: #777;
+	padding-bottom: 4px;
+}
+
+.viddetails {
+	font-size: 11px;
+	color: #777;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.viddetails > div {
+	padding-left: 15px;
+}
+
+/* shitty garbage code */
+.duration {
+	position: absolute;
+	border-radius: 2px;
+	bottom: 0px;
+	right: 3px;
+	text-align: right;
+	font-size: 11px;
+	opacity: .75;
+	font-weight: bold;
+	padding-right: 4px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin: 0;
+	padding-left: 4px;
+	color: #fff;
+	background-color: #000;
+}
+
+.thumbnail {
+	width: 120px;
+	height: 72px;
+	padding: 1px;
+	border: solid #999 1px;
+}
