@@ -1,9 +1,9 @@
 <html>
 	<head>
-		<title>DaiohToob - You're on the Internet!</title>
+		<title>DaiohToob - Oh my gah!</title>
 		<link rel="icon" type="image/x-icon" href="./favicon.ico">
 		<link rel="stylesheet" href="./style.css">
-		<!-- <script src="home.js" defer></script> -->
+		<script src="watch.js" defer></script>
 	</head>
 	<body>
 		<div id="content">
@@ -23,17 +23,48 @@
 				</div>
 				<div style="display: flex;"> <input type="text" id="searchbar"><button id="searchbutton">Search</button> </div>
 			</div>
-			<h2 id="videotitle">Title</h2>
+			<h2 id="videotitle">Video loading...</h2>
 			<div id="watch">
 			<div style="width: 640px; padding-right: 15px; flex-shrink: 0;">
-			 <video width="320" height="240" controls>
-				<source src="movie.mp4" type="video/mp4">
-				<source src="movie.ogg" type="video/ogg">
+			<video width="640" height="480" controls id="videoplayer">
+				<source src="./media/ohmygahmp4.mp4" type="video/mp4" id="vidsource">
 				Your browser does not support the video tag.
 			</video> 
+			<div id="watchstats">
+				<div>
+					<img src="./media/star.png" style="height: 15px;">
+					<div id="watchlikes"></div>
+				</div>
+				<div>
+					<div id="watchviews"></div>
+				</div>
 			</div>
-			<div>
-			bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye bye 
+			<div id="watchactions">
+				I am so freaking lazy to implement this
+			</div>
+			<div id="commenttitle">
+				Comments
+				<div id="commentcount">(1273)</div>
+			</div>
+		</div>
+			<div style="width: 303px;">
+			<div id="watchchannel">
+				<div style="display: flex; flex-direction: row; justify-content: space-between;">
+					<div style="display: flex; flex-direction: row;">
+						<img id="watchpfp" src="./media/default.png">
+						<div style="display: flex; flex-direction: column; padding-left: 10px; font-size: 12px;">
+							<a id="watchauthor" href="javascript:nuhuh.play()"></a>
+							<div id="watchsubs"></div>
+						</div>
+					</div>
+					<div>
+						<button id="subbutton" onclick=" window.open('https://www.youtube.com/channel/UCWDdpAn-axApNZissdRPyXA?sub_confirmation=1', '_blank');">Subscribe</button>
+					</div>
+				</div>
+				<div id="watchdate"></div>
+				<div id="watchdescription">
+				</div>
+			</div>
 			</div>
 		</div>
 	</body>

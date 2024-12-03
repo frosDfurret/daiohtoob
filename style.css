@@ -164,3 +164,115 @@ a:hover {
 	display: flex;
 	flex-direction: row;
 }
+
+#videoplayer {
+	background-color: black;
+}
+
+#watchstats {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 5px;
+}
+
+#watchstats > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* garbage way of fixing this */
+
+#watchstats > div > div {
+	padding-top: 3px;
+}
+
+#watchlikes {
+	color: #777;
+	font-size: 13px;
+	padding-left: 7px;
+}
+
+#watchviews {
+	font-size: 14px;
+}
+
+#watchactions {
+	border: solid #aaa 1px;
+	margin-top: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	color: blue;
+}
+
+#commenttitle {
+	font-weight: bold;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	padding-top: 8px;
+}
+
+#commentcount {
+	color: #777;
+	padding-left: 3px;
+}
+
+#watchchannel {
+	border: solid #aaa 1px;
+	padding: 5px;
+	width: 100%;
+}
+
+#watchpfp {
+	width: 46px;
+	padding: 1px;
+	border: solid #999 1px;
+}
+
+#watchauthor {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+	
+#watchdate {
+	color: #333;
+	font-size: 10px;
+	padding-top: 5px;
+}
+	
+#watchsubs {
+	color: #333;
+}
+
+#subbutton {
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+	color: #5D2A42;
+	font-size: 13px;
+	height: 28px;
+	background: rgb(252,177,166);
+	background: linear-gradient(0deg, rgba(255, 130, 71,1) 0%, rgba(245, 167, 0,1) 42%, rgba(255, 210, 112,1) 100%);
+	border: solid 1px #CC8B00;
+	border-radius: 5px;
+	font-family: Arial, sans-serif;
+}
+
+#subbutton:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#watchdescription {
+	padding-top: 5px;
+	font-size: 12px;
+}
