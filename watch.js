@@ -40,8 +40,6 @@ function containsDaioh(string) {
   return daiohList.some(substring => lowerCaseString.includes(substring.toLowerCase()));
 }
 
-
-
 video = JSON.parse(httpGet('https://vid.daguil.com/api/v1/videos/' + urlParams.get('v')))
 if (containsDaioh(video["title"]) || containsDaioh(video["descriptionHtml"]) || containsDaioh(video["author"]) || containsDaioh(video["keywords"].toString())) {
 	console.log('Daioh verified.')

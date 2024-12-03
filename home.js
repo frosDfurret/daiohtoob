@@ -1,5 +1,6 @@
 ohmygah = new Audio('./media/oh-my-gah.mp3');
 nuhuh = new Audio('./media/sectionfail.mp3');
+daiohList = ['azumanga','daioh','kiyohiko','azuma','ayumu','kasuga','osaka','chiyo','mihama','sakaki','kagura','tomo','takino','minamo','kurosawa','kaori','kaorin','yukari','koyomi','mizuhara','yomi','chihiro','oh my gah']
 
 // i don't care that this isn't asynchronous
 function httpGet(theUrl)
@@ -32,6 +33,11 @@ function getDuration(time) {
 	} else {
 		return "0:" + time.toString().padStart(2, '0')
 	}
+}
+
+function containsDaioh(string) {
+  const lowerCaseString = string.toLowerCase();
+  return daiohList.some(substring => lowerCaseString.includes(substring.toLowerCase()));
 }
 
 results = JSON.parse(httpGet('https://vid.daguil.com/api/v1/search?q=azumanga+daioh&sort=date&type=video'))
