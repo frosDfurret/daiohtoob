@@ -1,80 +1,16 @@
-ohmygah = new Audio("./media/oh-my-gah.mp3");
-nuhuh = new Audio("./media/sectionfail.mp3");
-daiohList = [
-  "azumanga",
-  "daioh",
-  "kiyohiko",
-  "azuma",
-  "ayumu",
-  "kasuga",
-  "osaka",
-  "chiyo",
-  "mihama",
-  "sakaki",
-  "kagura",
-  "tomo",
-  "takino",
-  "minamo",
-  "kurosawa",
-  "kaori",
-  "kaorin",
-  "yukari",
-  "koyomi",
-  "mizuhara",
-  "yomi",
-  "chihiro",
-  "oh my gah",
-  "sata",
-  "andagi",
-];
-urlParams = new URLSearchParams(window.location.search);
-// i don't care that this isn't asynchronous
-function httpGet(theUrl) {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", theUrl, false); // false for synchronous request
-  xmlHttp.send(null);
-  return xmlHttp.responseText;
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const checkbox = document.getElementById('fillcheckbox');
 
-function truncateIt(txt, len) {
-  if (txt.length > len) {
-    return txt.slice(0, len) + "...";
-  } else {
-    return txt;
-  }
-}
-
-function getDuration(time) {
-  if (time >= 60 && time < 3600) {
-    min = Math.floor(time / 60);
-    sec = time - min * 60;
-    return min.toString() + ":" + sec.toString().padStart(2, "0");
-  } else if (time > 3600) {
-    hour = Math.floor(time / 60 / 60);
-    min = Math.floor(time / 60) - hour * 60;
-    sec = time - min * 60;
-    return (
-      hour.toString() +
-      ":" +
-      min.toString() +
-      ":" +
-      sec.toString().padStart(2, "0")
-    );
-  } else {
-    return "0:" + time.toString().padStart(2, "0");
-  }
-}
-
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-function containsDaioh(string) {
-  const lowerCaseString = string.toLowerCase();
-  return daiohList.some((substring) =>
-    lowerCaseString.includes(substring.toLowerCase()),
-  );
-}
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            document.getElementById("videoplayer").style.objectFit = "cover"
+			localStorage.setItem("fillvideo", true);
+        } else {
+            document.getElementById("videoplayer").style.objectFit = "contain"
+			localStorage.setItem("fillvideo", false);
+        }
+    });
+});
 
 video = JSON.parse(
   httpGet("https://vid.daguil.com/api/v1/videos/" + urlParams.get("v")),
@@ -123,6 +59,13 @@ document.getElementById("subbutton").onclick = function () {
   );
 };
 document.title = "DaiohToob - " + video["title"];
+
+if (localStorage.getItem("fillvideo") == "true") {
+	document.getElementById('fillcheckbox').checked = true
+} else {
+	document.getElementById('fillcheckbox').checked = false
+	document.getElementById("videoplayer").style.objectFit = "contain"
+}
 
 /*
 results = JSON.parse(httpGet('https://vid.daguil.com/api/v1/search?q=azumanga+daioh&sort=date&type=video'))
