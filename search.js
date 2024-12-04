@@ -1,10 +1,10 @@
-document.getElementById('querytext').innerHTML = 'Results for "' + decodeURIComponent(urlParams.get("q")).replace('+', ' ') + '"'
-document.title = 'DaiohToob - Results for "' + decodeURIComponent(urlParams.get("q")).replace('+', ' ') + '"'
-document.getElementById('searchbar').value = decodeURIComponent(urlParams.get("q")).replace('+', ' ')
+document.getElementById('querytext').innerHTML = 'Results for "' + decodeURIComponent(urlParams.get("q")).replaceAll('+', ' ') + '"'
+document.title = 'DaiohToob - Results for "' + decodeURIComponent(urlParams.get("q")).replaceAll('+', ' ') + '"'
+document.getElementById('searchbar').value = decodeURIComponent(urlParams.get("q")).replaceAll('+', ' ')
 
 results = JSON.parse(
 	httpGet(
-		"https://vid.daguil.com/api/v1/search?q=" + sanitizeString(urlParams.get("q").replace('+', '%20')) + "azumanga+daioh&type=video",
+		"https://vid.daguil.com/api/v1/search?q=" + sanitizeString(urlParams.get("q").replaceAll('+', '%20')) + "azumanga+daioh&type=video",
 	),
 );
 
