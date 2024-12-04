@@ -27,7 +27,7 @@ daiohList = [
   "sata",
   "andagi",
 ];
-
+urlParams = new URLSearchParams(window.location.search);
 // i don't care that this isn't asynchronous
 function httpGet(theUrl) {
   var xmlHttp = new XMLHttpRequest();
